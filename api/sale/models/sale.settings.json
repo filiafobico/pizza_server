@@ -1,0 +1,41 @@
+{
+  "kind": "collectionType",
+  "collectionName": "sales",
+  "info": {
+    "name": "sale",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "client": {
+      "model": "client"
+    },
+    "deliveryman": {
+      "model": "deliveryman"
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "desk",
+        "delivery"
+      ]
+    },
+    "pizzas": {
+      "collection": "pizza"
+    },
+    "total": {
+      "type": "decimal"
+    },
+    "address": {
+      "type": "string"
+    },
+    "promotion": {
+      "model": "promotion"
+    }
+  }
+}

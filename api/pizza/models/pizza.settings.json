@@ -1,0 +1,37 @@
+{
+  "kind": "collectionType",
+  "collectionName": "pizzas",
+  "info": {
+    "name": "pizza",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "flavor": {
+      "type": "string"
+    },
+    "price": {
+      "type": "decimal"
+    },
+    "size": {
+      "type": "enumeration",
+      "enum": [
+        "small",
+        "medium",
+        "big",
+        "giga"
+      ]
+    },
+    "img": {
+      "type": "string"
+    }
+  }
+}

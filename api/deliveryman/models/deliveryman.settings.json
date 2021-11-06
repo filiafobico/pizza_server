@@ -1,0 +1,22 @@
+{
+  "kind": "collectionType",
+  "collectionName": "deliverymen",
+  "info": {
+    "name": "deliveryman",
+    "description": ""
+  },
+  "options": {
+    "increments": true,
+    "timestamps": true,
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "cpf": {
+      "type": "string"
+    }
+  }
+}

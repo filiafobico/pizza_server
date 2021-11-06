@@ -1,0 +1,52 @@
+{
+  "routes": [
+    {
+      "method": "GET",
+      "path": "/deliverymen",
+      "handler": "deliveryman.find",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/deliverymen/count",
+      "handler": "deliveryman.count",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "GET",
+      "path": "/deliverymen/:id",
+      "handler": "deliveryman.findOne",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "POST",
+      "path": "/deliverymen",
+      "handler": "deliveryman.create",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "PUT",
+      "path": "/deliverymen/:id",
+      "handler": "deliveryman.update",
+      "config": {
+        "policies": []
+      }
+    },
+    {
+      "method": "DELETE",
+      "path": "/deliverymen/:id",
+      "handler": "deliveryman.delete",
+      "config": {
+        "policies": []
+      }
+    }
+  ]
+}
