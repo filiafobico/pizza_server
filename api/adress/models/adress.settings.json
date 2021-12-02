@@ -1,8 +1,8 @@
 {
   "kind": "collectionType",
-  "collectionName": "clients",
+  "collectionName": "adresses",
   "info": {
-    "name": "client"
+    "name": "Adress"
   },
   "options": {
     "increments": true,
@@ -11,15 +11,15 @@
   },
   "pluginOptions": {},
   "attributes": {
-    "name": {
+    "street": {
       "type": "string"
     },
-    "cpf": {
+    "number": {
       "type": "string"
     },
-    "adresses": {
-      "via": "client",
-      "collection": "adress"
+    "client": {
+      "model": "client",
+      "via": "adresses"
     }
   }
 }

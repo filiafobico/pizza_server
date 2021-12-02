@@ -1,6 +1,6 @@
 {
   "paths": {
-    "/sales": {
+    "/adresses": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -12,7 +12,7 @@
                 "schema": {
                   "type": "array",
                   "items": {
-                    "$ref": "#/components/schemas/Sale"
+                    "$ref": "#/components/schemas/Adress"
                   }
                 }
               }
@@ -51,7 +51,7 @@
         },
         "summary": "",
         "tags": [
-          "Sale"
+          "Adress"
         ],
         "parameters": [
           {
@@ -201,7 +201,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Sale"
+                  "$ref": "#/components/schemas/Adress"
                 }
               }
             }
@@ -239,7 +239,7 @@
         },
         "summary": "",
         "tags": [
-          "Sale"
+          "Adress"
         ],
         "requestBody": {
           "description": "",
@@ -247,14 +247,14 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSale"
+                "$ref": "#/components/schemas/NewAdress"
               }
             }
           }
         }
       }
     },
-    "/sales/count": {
+    "/adresses/count": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -306,12 +306,12 @@
         },
         "summary": "",
         "tags": [
-          "Sale"
+          "Adress"
         ],
         "parameters": []
       }
     },
-    "/sales/{id}": {
+    "/adresses/{id}": {
       "get": {
         "deprecated": false,
         "description": "",
@@ -321,7 +321,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Sale"
+                  "$ref": "#/components/schemas/Adress"
                 }
               }
             }
@@ -359,7 +359,7 @@
         },
         "summary": "",
         "tags": [
-          "Sale"
+          "Adress"
         ],
         "parameters": [
           {
@@ -383,7 +383,7 @@
             "content": {
               "application/json": {
                 "schema": {
-                  "$ref": "#/components/schemas/Sale"
+                  "$ref": "#/components/schemas/Adress"
                 }
               }
             }
@@ -421,7 +421,7 @@
         },
         "summary": "",
         "tags": [
-          "Sale"
+          "Adress"
         ],
         "requestBody": {
           "description": "",
@@ -429,7 +429,7 @@
           "content": {
             "application/json": {
               "schema": {
-                "$ref": "#/components/schemas/NewSale"
+                "$ref": "#/components/schemas/NewAdress"
               }
             }
           }
@@ -495,7 +495,7 @@
         },
         "summary": "",
         "tags": [
-          "Sale"
+          "Adress"
         ],
         "parameters": [
           {
@@ -514,12 +514,18 @@
   },
   "components": {
     "schemas": {
-      "Sale": {
+      "Adress": {
         "required": [
           "id"
         ],
         "properties": {
           "id": {
+            "type": "string"
+          },
+          "street": {
+            "type": "string"
+          },
+          "number": {
             "type": "string"
           },
           "client": {
@@ -553,149 +559,21 @@
               }
             }
           },
-          "deliveryman": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "name": {
-                "type": "string"
-              },
-              "cpf": {
-                "type": "string"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "desk",
-              "delivery"
-            ]
-          },
-          "pizzas": {
-            "type": "array",
-            "items": {
-              "required": [
-                "id"
-              ],
-              "properties": {
-                "id": {
-                  "type": "string"
-                },
-                "name": {
-                  "type": "string"
-                },
-                "flavor": {
-                  "type": "string"
-                },
-                "price": {
-                  "type": "number"
-                },
-                "size": {
-                  "type": "string",
-                  "enum": [
-                    "small",
-                    "medium",
-                    "big",
-                    "giga"
-                  ]
-                },
-                "img": {
-                  "type": "string"
-                },
-                "published_at": {
-                  "type": "string"
-                },
-                "created_by": {
-                  "type": "string"
-                },
-                "updated_by": {
-                  "type": "string"
-                }
-              }
-            }
-          },
-          "total": {
-            "type": "number"
-          },
-          "address": {
-            "type": "string"
-          },
-          "promotion": {
-            "required": [
-              "id"
-            ],
-            "properties": {
-              "id": {
-                "type": "string"
-              },
-              "description": {
-                "type": "string"
-              },
-              "code": {
-                "type": "string"
-              },
-              "percentage": {
-                "type": "number"
-              },
-              "published_at": {
-                "type": "string"
-              },
-              "created_by": {
-                "type": "string"
-              },
-              "updated_by": {
-                "type": "string"
-              }
-            }
-          },
           "published_at": {
             "type": "string",
             "format": "date-time"
           }
         }
       },
-      "NewSale": {
+      "NewAdress": {
         "properties": {
+          "street": {
+            "type": "string"
+          },
+          "number": {
+            "type": "string"
+          },
           "client": {
-            "type": "string"
-          },
-          "deliveryman": {
-            "type": "string"
-          },
-          "type": {
-            "type": "string",
-            "enum": [
-              "desk",
-              "delivery"
-            ]
-          },
-          "pizzas": {
-            "type": "array",
-            "items": {
-              "type": "string"
-            }
-          },
-          "total": {
-            "type": "number"
-          },
-          "address": {
-            "type": "string"
-          },
-          "promotion": {
             "type": "string"
           },
           "published_at": {
@@ -714,7 +592,7 @@
   },
   "tags": [
     {
-      "name": "Sale"
+      "name": "Adress"
     }
   ]
 }

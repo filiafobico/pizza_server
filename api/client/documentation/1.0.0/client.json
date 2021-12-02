@@ -528,6 +528,37 @@
           "cpf": {
             "type": "string"
           },
+          "adresses": {
+            "type": "array",
+            "items": {
+              "required": [
+                "id"
+              ],
+              "properties": {
+                "id": {
+                  "type": "string"
+                },
+                "street": {
+                  "type": "string"
+                },
+                "number": {
+                  "type": "string"
+                },
+                "client": {
+                  "type": "string"
+                },
+                "published_at": {
+                  "type": "string"
+                },
+                "created_by": {
+                  "type": "string"
+                },
+                "updated_by": {
+                  "type": "string"
+                }
+              }
+            }
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -541,6 +572,12 @@
           },
           "cpf": {
             "type": "string"
+          },
+          "adresses": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
           },
           "published_at": {
             "type": "string",
