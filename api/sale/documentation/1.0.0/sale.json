@@ -651,6 +651,9 @@
               "percentage": {
                 "type": "number"
               },
+              "expiresAt": {
+                "type": "string"
+              },
               "published_at": {
                 "type": "string"
               },

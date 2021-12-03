@@ -20,6 +20,9 @@
     },
     "percentage": {
       "type": "decimal"
+    },
+    "expiresAt": {
+      "type": "datetime"
     }
   }
 }

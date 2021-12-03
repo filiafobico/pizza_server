@@ -531,6 +531,10 @@
           "percentage": {
             "type": "number"
           },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time"
+          },
           "published_at": {
             "type": "string",
             "format": "date-time"
@@ -547,6 +551,10 @@
           },
           "percentage": {
             "type": "number"
+          },
+          "expiresAt": {
+            "type": "string",
+            "format": "date-time"
           },
           "published_at": {
             "type": "string",
