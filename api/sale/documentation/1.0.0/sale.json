@@ -631,9 +631,6 @@
           "total": {
             "type": "number"
           },
-          "address": {
-            "type": "string"
-          },
           "promotion": {
             "required": [
               "id"
@@ -652,6 +649,34 @@
                 "type": "number"
               },
               "expiresAt": {
+                "type": "string"
+              },
+              "published_at": {
+                "type": "string"
+              },
+              "created_by": {
+                "type": "string"
+              },
+              "updated_by": {
+                "type": "string"
+              }
+            }
+          },
+          "adress": {
+            "required": [
+              "id"
+            ],
+            "properties": {
+              "id": {
+                "type": "string"
+              },
+              "street": {
+                "type": "string"
+              },
+              "number": {
+                "type": "string"
+              },
+              "client": {
                 "type": "string"
               },
               "published_at": {
@@ -695,10 +720,10 @@
           "total": {
             "type": "number"
           },
-          "address": {
+          "promotion": {
             "type": "string"
           },
-          "promotion": {
+          "adress": {
             "type": "string"
           },
           "published_at": {

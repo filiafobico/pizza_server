@@ -31,11 +31,11 @@
     "total": {
       "type": "decimal"
     },
-    "address": {
-      "type": "string"
-    },
     "promotion": {
       "model": "promotion"
+    },
+    "adress": {
+      "model": "adress"
     }
   }
 }
